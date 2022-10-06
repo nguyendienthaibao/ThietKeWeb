@@ -1,8 +1,8 @@
-*{padding:0; margin:0;}
+*{padding: 0; margin: 0;}
 body{
-    background-image: url('https://cdn.tgdd.vn/Files/2016/11/16/914404/imac-apple_800x450.jpg');
+    background-image: url('https://img2.thuthuat123.com/uploads/2019/11/19/anh-background-bau-troi-dep-may-hong_122622007.jpg');
     background-size: cover;
-    background-position-y: 65px;
+    background-position-y: 30px;
 }
 
 .container{
@@ -76,4 +76,49 @@ nav{
 #main-menu ul.sub-menu ul.sub-menu{
     left: 200px;
     top: -16px;
+}
+/* Thiết lập border khi hover */
+#main-menu>li>a{
+    position: relative;
+}
+
+#main-menu>li>a::before{
+    content: "";
+    height: 4px;
+    width: 0px;
+    background: pink;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    transition: 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#main-menu>li:hover>a::before{
+    width: 100%;
+}
+
+#main-menu>li.has-child::after{
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    content: "\f107";
+    color: #858585;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 18px 0px;
+}
+
+#main-menu .sub-menu li:hover>a{
+    color: pink;
+}
+
+#main-menu .sub-menu>li.has-child::after{
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    content: "\f105";
+    color: #858585;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 8px 0px;
 }
